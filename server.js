@@ -3,7 +3,6 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const bodyParser = require('body-parser')
-const errorHandler = require('./middleWare/errorMiddleware')
 const cookieParser = require('cookie-parser')
 const path = require('path')
 
@@ -11,11 +10,6 @@ const path = require('path')
 
 //import routes
 const subscriberRoute = require('./routes/subscriberRoutes')
-const plotRoute = require('./routes/plotRoutes')
-const agentRoute = require('./routes/agentRoutes')
-const paymentRoute = require('./routes/paymentRoutes')
-const dashboardRoute = require('./routes/dashboardRoutes')
-const documentRoute = require('./routes/documentRoutes')
 
 
 // start express app
@@ -44,11 +38,6 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")))
 
 //routes middleware
 app.use("/api/subscriber", subscriberRoute)
-app.use("/api/plot", plotRoute)
-app.use("/api/agent", agentRoute)
-app.use("/api/payment", paymentRoute)
-app.use("/api/dashboard", dashboardRoute)
-app.use("/api/document", documentRoute)
 
 // routes
 app.get("/", (req, res) => {
