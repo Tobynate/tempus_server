@@ -9,7 +9,7 @@ const path = require('path')
 
 
 //import routes
-const subscriberRoute = require('./routes/subscriberRoutes')
+const tempusRoute = require('./routes/tempusRoutes')
 
 
 // start express app
@@ -37,7 +37,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")))
 
 
 //routes middleware
-app.use("/api/subscriber", subscriberRoute)
+app.use("/api/tempus", tempusRoute)
 
 // routes
 app.get("/", (req, res) => {

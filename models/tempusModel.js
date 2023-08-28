@@ -3,9 +3,9 @@ const bcrypt = require('bcrypt')
 
 const { Schema } = mongoose;
 
-const subscriberSchema = new Schema({
+const tempusSchema = new Schema({
 
-  fileNumber: {
+  temperature: {
     type: String,
     unique: true,
     trim: true
@@ -19,6 +19,6 @@ const subscriberSchema = new Schema({
 
 
 
-const Subscriber = mongoose.model('Subscriber', subscriberSchema);
+const tempus = mongoose.model('tempus', tempusSchema);
 
-module.exports = Subscriber;
+module.exports = tempus;

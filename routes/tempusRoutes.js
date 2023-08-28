@@ -3,16 +3,16 @@ const express = require("express")
 
 // import controllers
 
-//subscriber controllers
-const { signup } = require("../controllers/subscriberController")
+//tempus controllers
+const { getTemperature } = require("../controllers/tempusController")
 
 
 
 //create Router
 const router = express.Router()
 
-//subscriber sign up route
-router.post("/signup", signup)
+//tempus sign up route
+router.post("/getTemperature", getTemperature)
 
 
 
